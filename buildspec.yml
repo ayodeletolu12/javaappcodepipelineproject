@@ -16,8 +16,11 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - cd src mvn clean install
-      - cd src mvn clean install -Dovrdir=postgres -Ppostgres
+      - pwd
+      - cd ./src
+      - pwd
+      - mvn clean install
+      - mvn clean install -Dovrdir=postgres -Ppostgres
   post_build:
     commands:
       - echo Build completed on `date`
