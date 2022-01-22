@@ -12,10 +12,9 @@ hooks:
       timeout: 300
       runas: root 
   AfterInstall:
-    - location: Scripts/privileges.sh
+    - location: privileges.sh
       timeout: 300
-    - location: createdb.sh  
-      timeout: 300
+      runas: root
   ApplicationStart:
     - location: Scripts/start_server.sh
       timeout: 300
