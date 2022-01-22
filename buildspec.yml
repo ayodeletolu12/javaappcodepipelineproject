@@ -6,7 +6,6 @@ phases:
       java: corretto11
     commands:
       - echo Entered the install phase... 
-      - sudo apt update
       - sudo apt install -y maven
     finally:
       - echo This always runs even if the update or install command fails  
