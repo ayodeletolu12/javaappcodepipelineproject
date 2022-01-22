@@ -25,9 +25,9 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-      - src/web/app/target/*.war
-      - scripts/*.sh
-      - appspec.yml
+    - src/web/app/target/*.war
+    - scripts/*.sh
+    - appspec.yml
   discard-paths: yes
 
 #cache:
