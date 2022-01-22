@@ -1,3 +1,6 @@
 #!/bin/bash
-sudo chmod +x /usr/share/tomcat9/bin/
-sudo /usr/share/tomcat9/bin/
+cd /home/ubuntu/server
+sudo cp geostore.war /usr/share/tomcat9/bin
+sudo systemctl restart tomcat9
+
+
