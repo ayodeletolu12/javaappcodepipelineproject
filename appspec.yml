@@ -5,10 +5,12 @@ files:
     destination: /usr/share/tomcat9/lib/
 hooks:
   BeforeInstall:
-    - location: Scripts/install_dependencies.sh
+    - location: server_clear.sh
       timeout: 300
       runas: root
-    - location: server_clear.sh  
+    - location: Scripts/install_dependencies.sh
+      timeout: 300
+      runas: root 
   AfterInstall:
     - location: Scripts/privileges.sh
       timeout: 300
