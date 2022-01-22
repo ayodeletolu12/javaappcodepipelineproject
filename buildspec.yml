@@ -8,6 +8,7 @@ phases:
       - echo Entered the install phase... 
       - apt update -y
       - apt install -y maven
+      - apt install postgresql postgresql-contrib -y
     finally:
       - echo This always runs even if the update or install command fails  
   pre_build:
