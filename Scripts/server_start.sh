@@ -1,6 +1,6 @@
 #!/bin/bash
 cd /home/ubuntu/server
-sudo cp geostore.war /usr/share/tomcat9/bin
+sudo cp geostore.war /var/lib/tomcat9/webapps/
 sudo systemctl restart tomcat9
 
 
