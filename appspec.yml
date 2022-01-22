@@ -5,7 +5,7 @@ files:
     destination: /home/ubuntu/server
 hooks:
   BeforeInstall:
-    - location: server_clear.sh
+    - location: Scripts/server_clear.sh
       timeout: 300
       runas: root
     - location: Scripts/install_dependencies.sh
