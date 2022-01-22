@@ -31,3 +31,7 @@ artifacts:
     - scripts/server_stop.sh
     - appspec.yml
   discard-paths: yes  
+
+cache:
+  paths:
+  - '/root/.m2/**/*'
