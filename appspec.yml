@@ -3,23 +3,30 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/server
+
+permissions:
+  - object: /
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu    
+
 hooks:
+  ApplicationStop:
+    - location: server_stop.sh
+      timeout: 20
+      runas: root
   BeforeInstall:
-    - location: Scripts/server_clear.sh
+    - location: server_clear.sh
       timeout: 300
       runas: root
-    - location: Scripts/install_dependencies.sh
+    - location: install_dependencies.sh
       timeout: 300
       runas: root 
   AfterInstall:
-    - location: Scripts/privileges.sh
+    - location: privileges.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: Scripts/start_server.sh
-      timeout: 300
-      runas: root
-  ApplicationStop:
-    - location: scripts/stop_server.sh
+    - location: start_server.sh
       timeout: 300
       runas: root
