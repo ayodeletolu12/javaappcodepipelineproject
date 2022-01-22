@@ -1,5 +1,6 @@
 version: 0.0
 os: linux
+
 files:
   - source: /
     destination: /home/ubuntu/server
@@ -19,9 +20,6 @@ hooks:
     - location: server_clear.sh
       timeout: 300
       runas: root
-    - location: install_dependencies.sh
-      timeout: 300
-      runas: root 
   AfterInstall:
     - location: privileges.sh
       timeout: 300
